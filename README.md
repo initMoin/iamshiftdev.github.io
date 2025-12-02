@@ -67,13 +67,13 @@ Every section implements:
 
 ├── assets/
 
-│   ├── logo-orange.png
+│     ├── logo-orange.png
 
-│   ├── logo-dark.png   # Optional future theme variant
+│     ├── logo-dark.png   # Optional future theme variant
 
-│   ├── moin.png        # Portrait asset for “self” section
+│     ├── moin.png        # Portrait asset for “self” section
 
-│   └── …other images
+│     └── …other images
 
 └── README.md
 
