@@ -1,5 +1,6 @@
 # iamshift.dev — Personal Identity System
 **let shift : Moin**
+
 shift is standard // design is craft
 
 This repository contains the complete source code for **iamshift.dev**, a motion-driven identity system and portfolio website built from the ground up using semantic HTML, precision CSS, scroll-driven micro-interactions, and a fully custom boot sequence.
@@ -7,7 +8,7 @@ No frameworks. No templates. Pure hand-crafted front-end architecture.
 
 ---
 
-## ✦ Features
+## Features
 
 ### **1. Custom Boot Sequence**
 A multi-phase intro experience designed to simulate a system initialization:
