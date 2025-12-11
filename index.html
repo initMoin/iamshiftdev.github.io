@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQ8S5CFG5X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZQ8S5CFG5X');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#000000" id="theme-color-meta">
@@ -396,8 +405,8 @@
               <img src="assets/moin.png" alt="Moinuddin Ahmad" title="Moinuddin Ahmad - iOS Developer & Designer">
             </div>
             <p class="self-minor-blurb mono">
-              Designer &amp; Engineer<br>
-              Apple Ecosystem
+              iOS Developer &amp; Designer<br>
+              <em>Apple Ecosystem</em>
             </p>
           </div>
 
@@ -822,6 +831,14 @@
             "theme-echo", "theme-self", "theme-ping"
             );
           document.body.classList.add(`theme-${id}`);
+
+          // GOOGLE ANALYTICS: Track Virtual Pageview
+          if (typeof gtag === 'function' && bootFinished) {
+            gtag('event', 'page_view', {
+              page_title: `shift ∴ ${id}`,
+              page_path: `/${id}`
+            });
+          }
         }
       });
     }, { threshold: 0.25 });
