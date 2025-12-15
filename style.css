@@ -264,7 +264,8 @@ a[href*="500px"]:hover { color: #000000 !important; }
     position: absolute; top: 0; left: 0; width: 100%; height: 100vh;
     overflow-y: auto; display: block; z-index: 10001; /* Fix: Above global header */
     background: var(--black); color: var(--gray-light);
-    padding: 2rem; text-align: left; font-family: 'Overpass Mono', monospace;
+    padding: calc(2rem + env(safe-area-inset-top)) 2rem 2rem 2rem;
+    text-align: left; font-family: 'Overpass Mono', monospace;
   }
   #bootText p { opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.25s ease, max-height 0.25s ease; }
   #bootText p.visible { opacity: 1; max-height: 200px; }
@@ -608,7 +609,7 @@ body.theme-self .nav-arrow:hover, body.theme-self .nav-arrow.active-state { back
 
 /* Global Header (Badge + Title) */
 .global-logo-container {
-  position: fixed; top: 2rem; left: 2rem; width: var(--global-logo-size); height: var(--global-logo-size);
+  position: fixed; top: calc(2rem + env(safe-area-inset-top)); left: 2rem; width: var(--global-logo-size); height: var(--global-logo-size);
   background: rgba(255, 255, 255, 0.85); border-radius: 50%; display: flex; justify-content: center; align-items: center;
   z-index: 9999; 
   opacity: 0; /* Hidden during boot */
@@ -620,7 +621,7 @@ body.theme-self .nav-arrow:hover, body.theme-self .nav-arrow.active-state { back
 .global-logo-container.show .spin-target { visibility: visible; animation: spinReverb 1.2s ease-out both; animation-delay: 0.3s; }
 
 .site-title-wrap {
-  position: fixed; top: calc(2rem + (var(--global-logo-size) / 2)); left: calc(2rem + var(--global-logo-size) + 1.5rem);
+  position: fixed; top: calc(2rem + env(safe-area-inset-top) + (var(--global-logo-size) / 2)); left: calc(2rem + var(--global-logo-size) + 1.5rem);
   transform: translateY(-50%); z-index: 9998; pointer-events: none;
 }
 /* Title hidden initially to avoid bleed */
